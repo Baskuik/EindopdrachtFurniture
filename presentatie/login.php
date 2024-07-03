@@ -61,8 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <!--Brings you to signup.php when button is pressed-->
         Don't have an account yet? 
         <a href="signup.php">Signup</a><br><br>
-        Want to delete your account?
-        <a href="delete.php">Delete</a>
     </form>
 </div>
 </body>
