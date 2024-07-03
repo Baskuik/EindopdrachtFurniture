@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     //if password is true takes you to index page
                     if($user_data['password'] == $password)
                     {
-                        $_SESSION['user_id'] = $user_data['user_id'];
+                        $_SESSION['user_id'] = $user_data['user_id'];   
                         header("Location: index.php");
                         die;
                     }
@@ -61,6 +61,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <!--Brings you to signup.php when button is pressed-->
         Don't have an account yet? 
         <a href="signup.php">Signup</a><br><br>
+        Want to delete your account?
+        <a href="delete.php">Delete</a>
     </form>
 </div>
 </body>
