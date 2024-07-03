@@ -1,0 +1,48 @@
+body{
+    background-color: white;
+}
+.container{
+    display: flex;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#img{
+    float: left;
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #8c52ff;
+}
+#h1{
+    margin: 0%;
+    padding: 20px;
+     border-style: solid;
+     border-width: 2px;
+    text-align: center;
+}
+#text{
+    text-align: center;
+    border: 5px solid #8c52ff;
+    width: 200px;
+    height: 380px;  
+    font-size: 15px;
+}
+.button{
+    background-color: #8c52ff;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;  
+}
+.button{
+    border-radius: 20px;
+}
+
