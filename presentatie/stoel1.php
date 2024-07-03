@@ -31,6 +31,7 @@
     </nav>
 <div class="container">
     <div>
+        <!-- akndkjajdo -->
         <img id="img" src="img/stoel1.jpg" alt="">
     </div>
     <div id="text">
