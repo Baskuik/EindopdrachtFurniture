@@ -5,26 +5,26 @@ include("functions.php");
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-    //something was posted
+    //Iets is gepost
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
-    //checks if username & password is not empty and checks if username is not numeric
+    //checks of username & password niet leeg zijn en checkt of naam niet numeric is 
     if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
     {
-            //read from database
-            //checks if username given by user is the same as any username in the database with the limit of 1 result
+            //leest van database
+            //checkt of de gegeven username hetzelfde is als een username in de database met een limiet van 1 resultaaat
             $query = "select * from users where user_name = '$user_name' limit 1";
 
             $result = mysqli_query($con, $query);
-            //checks if result is successfull
+            //checkt of result successvol is
             if($result)
             {
                 if($result && mysqli_num_rows($result) > 0)
                 {
                     $user_data = mysqli_fetch_assoc($result);
                     
-                    //if password is true takes you to index page
+                    //als het password klopt ga je naar index pagina
                     if($user_data['password'] == $password)
                     {
                         $_SESSION['user_id'] = $user_data['user_id'];   
@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
         <input id="button" type="submit" value="Login"><br><br>
 
-        <!--Brings you to signup.php when button is pressed-->
+        <!--Brengt je naar singup.php-->
         Don't have an account yet? 
         <a href="signup.php">Signup</a><br><br>
     </form>

@@ -5,19 +5,19 @@ session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        //something was posted
+        //iets is gepost
         $user_name = $_POST['user_name'];
         $password = $_POST['password'];
 
-        //checks if username & password is not empty and checks if username is not numeric
+        //checks of username & password niet leeg zijn en checkt of naam niet numeric is
         if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
         {
-                //save to database
+                //opslaan in database
                 $user_id = random_num(20);
                 $query = "insert into users (user_id, user_name, password) values ('$user_id', '$user_name', '$password')";
 
                 mysqli_query($con, $query);
-                //redirects you to login.php to login
+                //brengt je naar login
                 header("Location: login.php");
                 die;
         }else
@@ -46,7 +46,7 @@ session_start();
 
         <input id="button" type="submit" value="Signup"><br><br>
 
-        <!--Brings you to login.php when button is pressed-->
+        <!--brengt je naar login-->
         <a href="login.php">Click to login</a><br><br>
     </form>
 </div>

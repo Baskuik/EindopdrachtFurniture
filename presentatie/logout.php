@@ -1,11 +1,11 @@
 <?php
 session_start();
-//checks if the value is set and then unsets it
+//checkt of de value gezet is dan zet die hem uit
 if(isset($_SESSION['user_id']))
 {
     unset($_SESSION['user_id']);
 }
-//redirects user to login.php
+//brengt je naar de login pagina
 header("Location: login.php");
 die;
 ?>
