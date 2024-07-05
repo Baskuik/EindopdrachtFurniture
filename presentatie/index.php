@@ -59,7 +59,7 @@ session_start();
     <br>
     <!--zegt hallo tegen de ingelogde user-->
     <center><div id="p">
-    <p> Hello, <?php echo $user_data['user_name']; ?>. 
+    <p> Hallo, <?php echo $user_data['user_name']; ?>. 
    Wij bij Ikea richten ons op de kwaliteit en betaalbare producten voor in U huis. <Br>
     Vragen? Ons team helpt u graag! Kom bij een van onze winkels langs met uw vraag en laat ons team U helpen.</p>
 </div></center>
